@@ -185,12 +185,13 @@ def exp_convergence(out: Path, quick: bool) -> dict:
     # real Q^k A circuits on Aer (tiny burst, 19 qubits)
     s = tiny()
     q = build_qps_circuit(s)
-    region = [(1, 2), (2, 2), (1, 3)]
+    region = [(1, 0), (2, 0)]
     A, obj = q.state_preparation(region, None)
     sampler = AerAmplitudeSampler(A, obj, seed=7)
     a = exact_amplitude(s, region, None)
+    assert 0 < a < 1 and abs(sampler.probability(0) - a) < 1e-10
     aer_eps = [3e-2, 1e-2, 3e-3] if quick else [3e-2, 1e-2, 3e-3, 1e-3]
-    aer_trials = 4 if quick else 8
+    aer_trials = 4 if quick else 6
     aer_cost, aer_rmse, aer_powers = [], [], 0
     t0 = time.time()
     for eps in aer_eps:
