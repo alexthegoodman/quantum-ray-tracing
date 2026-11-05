@@ -22,6 +22,7 @@ dev = [
 
 [project.scripts]
 qrt-experiments = "quantum_ray_tracing.experiments:main"
+qps-experiments = "quantum_ray_tracing.particle_experiments:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

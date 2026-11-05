@@ -1,0 +1,295 @@
+{
+  "stats": {
+    "tiny(t=2)": {
+      "qubits": 18,
+      "seed_qubits": 4,
+      "particles": 16.0,
+      "gates": 70,
+      "controlled_x": 63,
+      "steps": 2,
+      "max_controls": 4
+    },
+    "firework(t=8)": {
+      "qubits": 53,
+      "seed_qubits": 21,
+      "particles": 2097152.0,
+      "gates": 1207,
+      "controlled_x": 1178,
+      "steps": 8,
+      "max_controls": 9
+    },
+    "firework(t=12)": {
+      "qubits": 61,
+      "seed_qubits": 29,
+      "particles": 536870912.0,
+      "gates": 1691,
+      "controlled_x": 1650,
+      "steps": 12,
+      "max_controls": 9
+    },
+    "fountain": {
+      "qubits": 167,
+      "seed_qubits": 77,
+      "particles": 1.5111572745182865e+23,
+      "gates": 6129,
+      "controlled_x": 6124,
+      "steps": 31,
+      "max_controls": 11
+    }
+  },
+  "frames": {
+    "particles_per_frame_gate_level": 150000,
+    "gate_level_mismatches": 0,
+    "gate_level_seconds": 2.3636980056762695,
+    "fountain_particles": 151115727451828646838272,
+    "firework_particles": {
+      "2": 512,
+      "5": 32768,
+      "8": 2097152,
+      "11": 134217728,
+      "14": 8589934592
+    }
+  },
+  "convergence": {
+    "queries": [
+      {
+        "query": "fountain: splash on the basin floor (green)",
+        "amplitude": 0.03257826402300527,
+        "particles": 1.5111572745182865e+23
+      },
+      {
+        "query": "fountain: spray above head height (count)",
+        "amplitude": 0.15000918444341313,
+        "particles": 1.5111572745182865e+23
+      },
+      {
+        "query": "firework t=8: light on a 4x4 sensor (red)",
+        "amplitude": 0.07558541638510569,
+        "particles": 2097152.0
+      },
+      {
+        "query": "firework t=12: sparks below the horizon (count)",
+        "amplitude": 0.29087010957300663,
+        "particles": 536870912.0
+      }
+    ],
+    "epsilons": [
+      0.03,
+      0.01,
+      0.003,
+      0.001,
+      0.0003,
+      0.0001,
+      3e-05
+    ],
+    "trials": 100,
+    "quantum_calls": [
+      2074.25,
+      5736.25,
+      17120.0,
+      49019.75,
+      159830.0,
+      475673.0,
+      1571027.0
+    ],
+    "quantum_rmse": [
+      0.0042395656581125365,
+      0.001360582566984545,
+      0.00040571178092583393,
+      0.00013029975393126392,
+      4.216756780362139e-05,
+      1.322700045890686e-05,
+      3.835915296093571e-06
+    ],
+    "mc_rmse": [
+      0.007537122918786461,
+      0.004429512716091677,
+      0.0027214091503376405,
+      0.00144676039460847,
+      0.0008319354012738925,
+      0.00046420883912058576,
+      0.0002630012214572696
+    ],
+    "slope_quantum": -1.0510596746291152,
+    "slope_mc": -0.5090393491317571,
+    "mc_particles_to_match_best": 7569259866.017915,
+    "speedup_at_best": 4818.0329593431015,
+    "aer": {
+      "qubits": 19,
+      "epsilons": [
+        0.03,
+        0.01,
+        0.003,
+        0.001
+      ],
+      "calls": [
+        1840.0,
+        6154.666666666667,
+        19168.0,
+        64288.0
+      ],
+      "rmse": [
+        0.005719281644187011,
+        0.0016943784117966483,
+        0.0003134261695198783,
+        0.00016596813893259704
+      ],
+      "max_power": 362,
+      "amplitude": 0.25
+    }
+  },
+  "sensors": {
+    "sensors": 64,
+    "rows": [
+      {
+        "epsilon": 0.001,
+        "total_calls": 6695136,
+        "rmse_quantum": 3.380308827871818e-05,
+        "rmse_mc": 2.1699704982496134e-05,
+        "mc_over_quantum": 0.641944452044575
+      },
+      {
+        "epsilon": 0.0003,
+        "total_calls": 26532800,
+        "rmse_quantum": 1.231458041795781e-05,
+        "rmse_mc": 1.3282015597807999e-05,
+        "mc_over_quantum": 1.0785601414758248
+      },
+      {
+        "epsilon": 0.0001,
+        "total_calls": 71580416,
+        "rmse_quantum": 3.3849516440419986e-06,
+        "rmse_mc": 9.419413239377536e-06,
+        "mc_over_quantum": 2.782731994401473
+      },
+      {
+        "epsilon": 3e-05,
+        "total_calls": 283469760,
+        "rmse_quantum": 9.905497017319193e-07,
+        "rmse_mc": 6.147412484203177e-06,
+        "mc_over_quantum": 6.2060616175591985
+      },
+      {
+        "epsilon": 1e-05,
+        "total_calls": 766558208,
+        "rmse_quantum": 3.190867388117883e-07,
+        "rmse_mc": 3.5564882199989135e-06,
+        "mc_over_quantum": 11.145835246060447
+      }
+    ]
+  },
+  "bounds": {
+    "bounding_box": [
+      {
+        "N": 512,
+        "quantum_evals": 635.0,
+        "classical_evals": 512,
+        "exact_fraction": 1.0
+      },
+      {
+        "N": 2048,
+        "quantum_evals": 1109.2,
+        "classical_evals": 2048,
+        "exact_fraction": 1.0
+      },
+      {
+        "N": 8192,
+        "quantum_evals": 2103.12,
+        "classical_evals": 8192,
+        "exact_fraction": 1.0
+      },
+      {
+        "N": 32768,
+        "quantum_evals": 4190.96,
+        "classical_evals": 32768,
+        "exact_fraction": 1.0
+      },
+      {
+        "N": 131072,
+        "quantum_evals": 8385.16,
+        "classical_evals": 131072,
+        "exact_fraction": 1.0
+      },
+      {
+        "N": 524288,
+        "quantum_evals": 16180.76,
+        "classical_evals": 524288,
+        "exact_fraction": 1.0
+      },
+      {
+        "N": 2097152,
+        "quantum_evals": 30053.2,
+        "classical_evals": 2097152,
+        "exact_fraction": 1.0
+      }
+    ],
+    "bounding_box_slope": 0.471831029810765,
+    "events": [
+      {
+        "N": 2097152,
+        "M": 27468,
+        "ratio": 76.34891510120868,
+        "quantum_evals": 11.24,
+        "classical_evals": 76.34617204849103,
+        "success": 1.0
+      },
+      {
+        "N": 2097152,
+        "M": 8190,
+        "ratio": 256.06251526251526,
+        "quantum_evals": 27.6,
+        "classical_evals": 256.03137590037846,
+        "success": 1.0
+      },
+      {
+        "N": 2097152,
+        "M": 2016,
+        "ratio": 1040.2539682539682,
+        "quantum_evals": 52.84,
+        "classical_evals": 1039.7387208725831,
+        "success": 1.0
+      },
+      {
+        "N": 2097152,
+        "M": 534,
+        "ratio": 3927.250936329588,
+        "quantum_evals": 99.0,
+        "classical_evals": 3919.9121495327104,
+        "success": 1.0
+      },
+      {
+        "N": 2097152,
+        "M": 129,
+        "ratio": 16256.992248062015,
+        "quantum_evals": 164.32,
+        "classical_evals": 16131.946153846155,
+        "success": 1.0
+      },
+      {
+        "N": 2097152,
+        "M": 36,
+        "ratio": 58254.22222222222,
+        "quantum_evals": 302.48,
+        "classical_evals": 56679.81081081081,
+        "success": 1.0
+      },
+      {
+        "N": 2097152,
+        "M": 9,
+        "ratio": 233016.88888888888,
+        "quantum_evals": 663.0,
+        "classical_evals": 209715.3,
+        "success": 1.0
+      },
+      {
+        "N": 2097152,
+        "M": 1,
+        "ratio": 2097152.0,
+        "quantum_evals": 2062.88,
+        "classical_evals": 1048576.5,
+        "success": 1.0
+      }
+    ],
+    "events_slope": 0.48824746522480283
+  }
+}
