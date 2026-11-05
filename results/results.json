@@ -1,0 +1,240 @@
+{
+  "scaling": {
+    "rows": [
+      {
+        "N": 16,
+        "classical_int_per_ray": 16.0,
+        "quantum_int_per_ray": 29.01640509651665,
+        "quantum_int_per_primary_ray": 32.437717013888886,
+        "quantum_int_per_shadow_ray": 25.54040348362915,
+        "oracle_calls_per_ray": 14.175042379832668,
+        "nrmse": 0.008936006750772508,
+        "differing_pixels": 32,
+        "pixels": 9216
+      },
+      {
+        "N": 32,
+        "classical_int_per_ray": 32.0,
+        "quantum_int_per_ray": 41.76615636960087,
+        "quantum_int_per_primary_ray": 46.908528645833336,
+        "quantum_int_per_shadow_ray": 36.543310557637206,
+        "oracle_calls_per_ray": 24.225751776927282,
+        "nrmse": 0.006677353684973293,
+        "differing_pixels": 26,
+        "pixels": 9216
+      },
+      {
+        "N": 64,
+        "classical_int_per_ray": 64.0,
+        "quantum_int_per_ray": 57.220667031164574,
+        "quantum_int_per_primary_ray": 64.64854600694444,
+        "quantum_int_per_shadow_ray": 49.67654837998678,
+        "oracle_calls_per_ray": 36.766320393657736,
+        "nrmse": 0.006385284382045766,
+        "differing_pixels": 21,
+        "pixels": 9216
+      },
+      {
+        "N": 128,
+        "classical_int_per_ray": 128.0,
+        "quantum_int_per_ray": 80.80190278309367,
+        "quantum_int_per_primary_ray": 91.64431423611111,
+        "quantum_int_per_shadow_ray": 69.78860354899152,
+        "oracle_calls_per_ray": 57.357045218437314,
+        "nrmse": 0.007037198202129724,
+        "differing_pixels": 27,
+        "pixels": 9216
+      },
+      {
+        "N": 256,
+        "classical_int_per_ray": 256.0,
+        "quantum_int_per_ray": 110.08611733829078,
+        "quantum_int_per_primary_ray": 125.40104166666667,
+        "quantum_int_per_shadow_ray": 94.52981373305411,
+        "oracle_calls_per_ray": 83.5244135819345,
+        "nrmse": 0.0056325576227341054,
+        "differing_pixels": 18,
+        "pixels": 9216
+      },
+      {
+        "N": 512,
+        "classical_int_per_ray": 512.0,
+        "quantum_int_per_ray": 154.88227252843396,
+        "quantum_int_per_primary_ray": 176.72200520833334,
+        "quantum_int_per_shadow_ray": 132.6958774250441,
+        "oracle_calls_per_ray": 125.24283683289589,
+        "nrmse": 0.00766890398927669,
+        "differing_pixels": 28,
+        "pixels": 9216
+      }
+    ],
+    "loglog_slope": 0.4792482392122962,
+    "sqrt_coefficient": 7.106929302810266,
+    "first_N_quantum_cheaper": 64
+  },
+  "scaling_seconds": 8.814428091049194,
+  "render": {
+    "resolution": 128,
+    "N": 64,
+    "classical_int_per_ray": 64.0,
+    "quantum_int_per_ray": 57.32164929434554,
+    "nrmse": 0.008252655393623048,
+    "differing_pixels": 48,
+    "aer": {
+      "resolution": 64,
+      "N": 64,
+      "circuits": 147494,
+      "seconds": 240.51925778388977,
+      "nrmse": 0.013235574187313375,
+      "differing_pixels": 43,
+      "int_per_ray": 55.48267387564512
+    }
+  },
+  "render_seconds": 242.69213557243347,
+  "qrm": {
+    "s2_circuit_seconds": 290.49429082870483,
+    "s2_circuit_vs_exact_max_abs": 1.0547118733938987e-15,
+    "s3_circuit_seconds": 90.64428377151489,
+    "s3_circuit_vs_exact_max_abs": 3.0848060217358864e-11,
+    "iqae_epsilon": 0.001,
+    "s3_mean_calls_per_voxel": 28946.5,
+    "s3_rmse_quantum": 0.000113077220936182,
+    "s3_rmse_mc": 0.000725509947053034,
+    "long_steps": 8,
+    "long_mean_calls_per_voxel": 40808.833333333336,
+    "long_rmse_quantum": 0.00028390433808390486,
+    "long_rmse_mc": 0.0009073861705301424
+  },
+  "qrm_seconds": 388.0030765533447,
+  "convergence": {
+    "voxels": [
+      [
+        2,
+        5
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "steps": 3,
+    "trials_per_voxel": 100,
+    "shots": 32,
+    "alpha": 0.001,
+    "epsilons": [
+      0.03,
+      0.01,
+      0.003,
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "cost": [
+      1238,
+      4108,
+      13826,
+      39067,
+      147043,
+      406685
+    ],
+    "quantum_rmse": [
+      0.006524018324822848,
+      0.002051125028363455,
+      0.0005998273135369569,
+      0.0002097151662434865,
+      6.248745041163492e-05,
+      1.9683936806640617e-05
+    ],
+    "mc_rmse": [
+      0.0073649016640007425,
+      0.004104502654683059,
+      0.002304178624895915,
+      0.0013170652967434042,
+      0.0007187476272943135,
+      0.0004136067304305978
+    ],
+    "quantum_slope": -0.9944678092368546,
+    "mc_slope": -0.495091106792091,
+    "mc_paths_to_match_best_quantum": 173312794.75433344,
+    "cost_ratio_at_best_quantum_error": 426.1597913725203,
+    "aer": {
+      "epsilons": [
+        0.03,
+        0.01,
+        0.003,
+        0.001
+      ],
+      "cost": [
+        1987.2,
+        5344.0,
+        17691.2,
+        52980.8
+      ],
+      "rmse": [
+        0.0064094702487720355,
+        0.0014986102765388602,
+        0.0004089155607680245,
+        0.0001841485429888204
+      ],
+      "max_grover_power": [
+        9,
+        35,
+        125,
+        345
+      ],
+      "trials": 20
+    },
+    "aer_two_step": {
+      "qubits": 20,
+      "exact_F": 0.125,
+      "estimate_F": 0.12533264872503888,
+      "interval_F": [
+        0.11816414216649204,
+        0.13250115528358572
+      ],
+      "queries": 5312,
+      "max_grover_power": 29,
+      "seconds": 68.96072006225586
+    }
+  },
+  "convergence_seconds": 195.97346138954163,
+  "stats": {
+    "1": {
+      "qubits": 11,
+      "depth": 923,
+      "cx": 541
+    },
+    "2": {
+      "qubits": 20,
+      "depth": 5837,
+      "cx": 3488
+    },
+    "3": {
+      "qubits": 28,
+      "depth": 10729,
+      "cx": 6485
+    },
+    "4": {
+      "qubits": 35,
+      "depth": 15611,
+      "cx": 9474
+    }
+  },
+  "stats_seconds": 0.5053722858428955
+}
