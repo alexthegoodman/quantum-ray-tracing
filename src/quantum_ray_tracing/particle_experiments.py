@@ -110,7 +110,9 @@ def exp_frames(out: Path, quick: bool) -> dict:
     print(f"  gate-level frames: {mism} mismatches vs integrator over {n * len(systems):,} particles")
 
     def white_of(img):  # per-frame exposure; the palette still carries the cooling colour
-        return float(np.percentile(np.moveaxis(img, 0, -1).max(2), 99.7))
+        lum = np.moveaxis(img, 0, -1).max(2)
+        w = float(np.percentile(lum, 99.7))
+        return w if w > 0 else float(lum.max())  # t = 0: every particle in one pixel
 
     with plt.rc_context({"axes.grid": False}):
         fig, axs = plt.subplots(2, 6, figsize=(15, 6.3))
